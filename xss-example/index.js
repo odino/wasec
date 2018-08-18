@@ -8,6 +8,14 @@ require('http').createServer((req, res) => {
     'X-XSS-Protection': 0
   }
 
+  if (query.xss === "on") {
+    headers['X-XSS-Protection'] = 1
+  }
+
+  if (query.xss === "off") {
+    delete headers['X-XSS-Protection'];
+  }
+
   if (query.csp === 'on') {
     headers['Content-Security-Policy'] = `default-src 'self'`
   }
