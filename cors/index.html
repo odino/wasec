@@ -1,0 +1,16 @@
+<html>
+<div id="output" />
+
+<script>
+fetch(`http://cors-test-2:7889/${document.location.search}`)
+  .then(function(response) {
+    return response.text()
+  })
+  .then(text => {
+    document.getElementById('output').innerHTML = text;
+  })
+  .catch(function(err) {
+    document.getElementById('output').innerHTML = err.message;
+  });
+</script>
+</html>
