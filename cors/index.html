@@ -2,7 +2,17 @@
 <div id="output" />
 
 <script>
-fetch(`http://cors-test-2:7889/${document.location.search}`)
+let params = (new URL(window.location.href)).searchParams
+let options = {}
+
+if ((params.get("method") || '').toUpperCase() === "POST") {
+  options.method = "POST"
+  options.headers = {
+    'Content-Type': 'application/json'
+  }
+}
+
+fetch(`http://cors-test-2:7889/${document.location.search}`, options)
   .then(function(response) {
     return response.text()
   })

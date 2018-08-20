@@ -9,5 +9,6 @@ have this line in your hostfile:
 
 You can then visit:
 
-* [cors-test, which makes a request to cors-test-2 without CORS enabled](http://cors-test:78888/)
-* [cors-test, which makes a request to cors-test-2 with CORS enabled](http://cors-test:7888/?cors=on)
+* [a GET request to cors-test-2 without CORS enabled](http://cors-test:78888/)
+* [a GET request to cors-test-2 with CORS enabled](http://cors-test:7888/?cors=on)
+* [a POST request to cors-test-2 that requires a preflight request, which fails](http://cors-test:7888/?method=POST)

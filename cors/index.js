@@ -11,7 +11,7 @@ require('http').createServer((req, res) => {
   }
 
   res.writeHead(200, headers)
-  res.end(`ok`)
+  res.end(`text coming from test-cors-2`)
 }).listen(7889)
 
 require('http').createServer((req, res) => {
