@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style>
+      * {
+        background: white;
+      }
+      a {
+        font-size: 3em;
+      }
+
+      #content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+
+      #content div {
+        width: 50%;
+      }
+    </style>
+  </head>
+<body>
+  <div>
+    <h1>
+      This is a banking website
+    </h1>
+  </div>
+  <div id="content">
+    <div>
+      <img src="/scrooge.jpeg" width="600" />
+    </div>
+    <div>
+      <a onclick="javascript:alert('Money!')">Click here to donate all your money to a random person!</a>
+    </div>
+  </div>
+  <script>
+  	document.querySelector('a').onclick = function () {
+  		parent.postMessage("hijacked", "*")
+  	};
+  </script>
+</body>
+</html>

