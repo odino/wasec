@@ -1,4 +1,4 @@
-# HSTS example
+# Clickjacking example
 
 ![](https://raw.githubusercontent.com/odino/wasec/master/clickjacking/cover.png)
 

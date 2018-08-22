@@ -1,5 +1,7 @@
 # Wasec
 
+![](https://raw.githubusercontent.com/odino/wasec/master/clickjacking/cover.png)
+
 Examples and tutorials from the [WASEC book](https://leanpub.com/wasec).
 
 Each of the directories in this repo has its own `README`, so go ahead and explore!
