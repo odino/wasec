@@ -3,8 +3,8 @@ var url = require('url')
 var fs = require('fs')
 
 const options = {
-  key: fs.readFileSync(__dirname + '/localhost-key.pem'),
-  cert: fs.readFileSync(__dirname + '/localhost.pem')
+  key: fs.readFileSync(__dirname + '/wasec.local-key.pem'),
+  cert: fs.readFileSync(__dirname + '/wasec.local.pem')
 };
 
 require('https').createServer(options, (req, res) => {
@@ -15,7 +15,7 @@ require('https').createServer(options, (req, res) => {
     headers['Strict-Transport-Security'] = 'max-age=5'
   }
 
-  headers['Location'] = 'http://localhost:7888'
+  headers['Location'] = 'http://wasec.local:7888'
 
   res.writeHead(302, headers)
   res.end()

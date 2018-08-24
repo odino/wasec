@@ -12,7 +12,7 @@ if ((params.get("method") || '').toUpperCase() === "POST") {
   }
 }
 
-fetch(`http://cors-test-2:7889/${document.location.search}`, options)
+fetch(`http://sub.wasec.local:7889/${document.location.search}`, options)
   .then(function(response) {
     return response.text()
   })
