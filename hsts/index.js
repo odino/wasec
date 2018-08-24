@@ -3,8 +3,8 @@ var url = require('url')
 var fs = require('fs')
 
 const options = {
-  key: fs.readFileSync(__dirname + '/wasec.local-key.pem'),
-  cert: fs.readFileSync(__dirname + '/wasec.local.pem')
+  key: fs.readFileSync(__dirname + '/../wasec.local-key.pem'),
+  cert: fs.readFileSync(__dirname + '/../wasec.local.pem')
 };
 
 require('https').createServer(options, (req, res) => {
