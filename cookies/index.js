@@ -3,6 +3,17 @@ var url = require('url')
 var fs = require('fs')
 
 function server (req, res) {
+  if (req.url === '/same-site-form') {
+    return res.end(`
+<html>
+  <form action="http://wasec.local:7888/" method="POST">
+    <input type="hidden" name="destination" value="attacker@email.com" />
+    <input type="hidden" name="amount" value="1000" />
+    <input type="submit" value="CLICK HERE TO WIN A HUMMER" />
+  </form>
+</html>
+`)
+  }
   let query = qs.parse(url.parse(req.url).query)
 
   if (query.clear === "on") {
@@ -45,6 +56,10 @@ function server (req, res) {
 
   if (query.httponly === 'on') {
     headers['Set-Cookie'].push(`http_only_cookie=test;HttpOnly`)
+  }
+
+  if (query.samesite === 'on') {
+    headers['Set-Cookie'].push(`same_site_cookie=test;SameSite=Lax`)
   }
 
   res.writeHead(200, headers)
