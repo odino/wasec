@@ -10,7 +10,7 @@ examples and tutorials from the [WASEC book](https://leanpub.com/wasec).
 Add this line to your hostfile:
 
 ```
-127.0.0.1 wasec.local sub.wasec.local
+127.0.0.1 wasec.local sub.wasec.local wasec2.local
 ```
 
 Each of the directories in this repo has its own `README`, so go ahead and explore!
