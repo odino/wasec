@@ -1,6 +1,6 @@
 # CORS example
 
-Run this example with nodejs, through `node index.js`. You will also need to
+Run this example with nodejs, through `node index.js`.
 have this line in your hostfile:
 
 You can then visit:
