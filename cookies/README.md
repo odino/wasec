@@ -2,7 +2,7 @@
 
 ![](https://www.publicdomainpictures.net/pictures/10000/velka/33-1210498515t3lN.jpg)
 
-Run this example with nodejs, through `node index.js`.
+Follow the common [installation instructions](https://github.com/odino/wasec#installation). Then, run this example with nodejs, through `node index.js`.
 
 You can then visit:
 

@@ -1,7 +1,7 @@
 # HSTS example
 
-Run this example with nodejs, through `node index.js`. You should also install
-[mkcert](https://github.com/FiloSottile/mkcert)'s root certificate with `mkcert -install`.
+Follow the common [installation instructions](https://github.com/odino/wasec#installation). Then, run this example with nodejs, through `node index.js`.
+You should also install [mkcert](https://github.com/FiloSottile/mkcert)'s root certificate with `mkcert -install`.
 
 You can then visit:
 

@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/odino/wasec/master/clickjacking/cover.png)
 
-Run this example with nodejs, through `node index.js`.
+Follow the common [installation instructions](https://github.com/odino/wasec#installation). Then, run this example with nodejs, through `node index.js`.
 
 You can then visit:
 
