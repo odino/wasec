@@ -2,8 +2,7 @@
 
 ![](https://www.publicdomainpictures.net/pictures/10000/velka/33-1210498515t3lN.jpg)
 
-Run this example with nodejs, through `node index.js`. You should have
-`127.0.0.1 wasec.local sub.wasec.local` in your hostfile.
+Run this example with nodejs, through `node index.js`.
 
 You can then visit:
 
